@@ -1,0 +1,117 @@
+/* ========== CSS Variables & Reset ========== */
+:root{
+  --bg:#0b0c0f;
+  --surface:#12141a;
+  --text:#e7e9ee;
+  --muted:#a8b0bf;
+  --brand:#7c5cff;
+  --brand2:#00e7b3;
+  --card:rgba(255,255,255,0.06);
+  --glass:rgba(255,255,255,0.08);
+  --border:1px solid rgba(255,255,255,0.12);
+  --shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text); background:var(--bg);
+}
+
+/* ========== Layout ========== */
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.section-title{font-size:1.9rem;margin:0 0 24px 0;letter-spacing:.2px}
+
+/* ========== Header & Nav ========== */
+.site-header{
+  position:sticky; top:0; z-index:100;
+  background:linear-gradient(180deg, rgba(11,12,15,0.95), rgba(11,12,15,0.6) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:800;color:var(--text);text-decoration:none;font-size:1.2rem;letter-spacing:.5px}
+.brand span{color:var(--brand)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--text)}
+#themeToggle{background:transparent;border:var(--border);color:var(--text);padding:6px 10px;border-radius:8px;cursor:pointer}
+
+/* ========== Hero ========== */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;min-height:65vh;padding-top:80px}
+.hero-text h1{font-size:3rem;margin:.2rem 0}
+.grad{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);margin:6px 0 14px}
+.tagline{max-width:60ch;color:#d6d9e0}
+.cta{margin:22px 0 8px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{border-radius:12px;padding:12px 18px;font-weight:600;text-decoration:none;display:inline-block;border:var(--border)}
+.primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#0b0c0f;border:none;box-shadow:var(--shadow)}
+.ghost{color:var(--text);background:transparent}
+.socials{display:flex;gap:14px;margin-top:8px}
+.socials a{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;border:var(--border);color:var(--text)}
+
+/* Hero Stat Card */
+.hero-card{
+  align-self:stretch;
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr;
+  background:var(--glass); border-radius:16px; padding:18px; border:var(--border);
+  box-shadow: var(--shadow);
+}
+.stat{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.stat .n{font-size:1.6rem;font-weight:800}
+.stat .l{font-size:.85rem;color:var(--muted)}
+.divider{width:1px;background:rgba(255,255,255,.15);height:auto}
+
+/* ========== Cards, Grid, Timeline ========== */
+.card{background:var(--card);border:var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.meta{color:var(--muted);font-size:.95rem}
+.meta-tags{display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:10px 0 0 0;list-style:none}
+.meta-tags li{border:var(--border);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04)}
+
+.timeline{position:relative;margin-left:10px}
+.timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.15)}
+.entry{position:relative;margin:24px 0 24px 0;padding-left:28px}
+.entry .dot{position:absolute;left:5px;top:12px;width:16px;height:16px;border-radius:50%;background:linear-gradient(90deg,var(--brand),var(--brand2));box-shadow:0 0 0 4px rgba(124,92,255,.2)}
+.entry .content{}
+
+/* Projects */
+.project{position:relative;overflow:hidden}
+.project .badge{
+  position:absolute;top:12px;right:12px;
+  background:linear-gradient(90deg,var(--brand),var(--brand2)); color:#0b0c0f;
+  font-weight:700; padding:6px 10px; border-radius:999px; font-size:.8rem
+}
+.project:hover{transform:translateY(-2px);transition:transform .2s ease}
+
+/* Pills */
+.pill-list{display:flex;gap:10px;flex-wrap:wrap;padding:0;margin:14px 0 0;list-style:none}
+.pill-list li{padding:8px 12px;border-radius:999px;border:var(--border);background:rgba(255,255,255,0.04);color:#d8dbe2}
+
+/* Contact */
+.contact-card p{margin:.4rem 0}
+
+/* ========== Footer ========== */
+.site-footer{border-top:var(--border);padding:24px 0;text-align:center;color:var(--muted)}
+
+/* ========== Blobs (decor) ========== */
+.blob{
+  position:fixed;filter:blur(60px);opacity:.35;z-index:-1;pointer-events:none;
+  width:46vw;height:46vw;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, var(--brand), transparent 60%);
+}
+.blob.b1{top:-10vh;left:-10vw}
+.blob.b2{bottom:-10vh;right:-10vw;background:radial-gradient(circle at 70% 70%, var(--brand2), transparent 60%)}
+
+/* ========== Reveal on scroll ========== */
+.reveal{opacity:0;transform:translateY(16px);transition:all .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px){
+  .hero{grid-template-columns:1fr;gap:22px}
+  .hero-card{grid-template-columns:1fr 1fr 1fr}
+  .divider{display:none}
+}

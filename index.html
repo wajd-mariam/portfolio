@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wajd Mariam — Portfolio</title>
+  <meta name="description" content="Portfolio of Wajd Mariam — Computer Systems Engineering student focused on Cloud, DevOps, Embedded & AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">WM<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <main id="top">
+    <section class="hero container reveal">
+      <div class="hero-text">
+        <h1>Hi, I’m <span class="grad">Wajd Mariam</span></h1>
+        <p class="subtitle">Computer Systems Engineering @ Carleton • DevOps, Systems, & AI/Embedded</p>
+        <p class="tagline">I build reliable systems from silicon to the cloud. Currently prepping <b>AWS SAA‑C03</b> and leading an AI-driven focus-tracking capstone.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+        </div>
+        <div class="socials">
+          <a href="mailto:wajdmariam@email.com" aria-label="Email">✉️</a>
+          <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+          <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer" aria-label="GitHub">gh</a>
+        </div>
+      </div>
+      <div class="hero-card glass">
+        <div class="stat">
+          <span class="n">3</span>
+          <span class="l">Co-ops</span>
+        </div>
+        <div class="divider"></div>
+        <div class="stat">
+          <span class="n">Dean’s</span>
+          <span class="l">List</span>
+        </div>
+        <div class="divider"></div>
+        <div class="stat">
+          <span class="n">2026</span>
+          <span class="l">Grad</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section reveal">
+      <h2 class="section-title">About</h2>
+      <p>
+        Final-year Computer Systems Engineering student focused on building robust, observable systems.
+        Hands-on across <b>DevOps & Cloud</b> (AWS, CI/CD), <b>Embedded/FPGA</b>, and <b>AI/ML</b> integration (MediaPipe + custom models).
+        I like turning complex ideas into clear, measurable systems that ship.
+      </p>
+      <ul class="pill-list">
+        <li>AWS • Linux • Docker • Terraform</li>
+        <li>Python • Java • C/C++ • Verilog</li>
+        <li>Networks • Wireshark • VPCs</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="container section reveal">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="entry">
+          <div class="dot"></div>
+          <div class="content card">
+            <h3>System Engineering Co‑op <span>— Comtech (Solacom Technologies)</span></h3>
+            <p class="meta">Summer 2025 • Gatineau, QC</p>
+            <p>Supported next‑gen 9‑1‑1 call‑handling systems. Performed OS patching, device configuration, hardware integration & validation in lab environments. Improved configuration tracking & documentation.</p>
+            <ul class="meta-tags">
+              <li>VoIP</li><li>Linux</li><li>Networking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="dot"></div>
+          <div class="content card">
+            <h3>IT Technician Co‑op <span>— ESDC (Government of Canada)</span></h3>
+            <p class="meta">Winter 2024 • Ottawa, ON</p>
+            <p>Enterprise support, device lifecycle, and workflow optimizations. Exposure to large‑scale endpoint management & security baselines.</p>
+            <ul class="meta-tags">
+              <li>Windows</li><li>Automation</li><li>Security</li>
+            </ul>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="dot"></div>
+          <div class="content card">
+            <h3>DevOps Co‑op <span>— Industrial & Financial Systems</span></h3>
+            <p class="meta">2023</p>
+            <p>Worked on CI/CD pipelines and cloud deployments to improve developer productivity and release reliability.</p>
+            <ul class="meta-tags">
+              <li>CI/CD</li><li>AWS</li><li>Containers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section reveal">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <article class="card project">
+          <div class="badge">AI/ML</div>
+          <h3>FocusCam (Capstone)</h3>
+          <p>Real‑time attention tracking using MediaPipe landmarks + custom scikit‑learn model (focused vs distracted). Local processing with privacy-first design; optional AWS logging & dashboard.</p>
+          <ul class="meta-tags"><li>MediaPipe</li><li>scikit‑learn</li><li>Python</li></ul>
+        </article>
+        <article class="card project">
+          <div class="badge">Robotics</div>
+          <h3>SnowBot3010</h3>
+          <p>Autonomous snowplow robot using Raspberry Pi + ESP32. Telemetry via MQTT, control panel with Firebase, and sensor fusion for pathing.</p>
+          <ul class="meta-tags"><li>Raspberry Pi</li><li>ESP32</li><li>MQTT</li></ul>
+        </article>
+        <article class="card project">
+          <div class="badge">Systems</div>
+          <h3>Elevator Control System</h3>
+          <p>Multi‑subsystem design with UDP sockets and state‑pattern logic. Simulated scheduling, fault handling, and monitoring.</p>
+          <ul class="meta-tags"><li>Java</li><li>Networking</li><li>Concurrency</li></ul>
+        </article>
+        <article class="card project">
+          <div class="badge">Digital Design</div>
+          <h3>FPGA Labs</h3>
+          <p>Verilog modules: traffic‑light FSM, ALU, register file. Testbenches and timing analysis.</p>
+          <ul class="meta-tags"><li>Verilog</li><li>Quartus/Vivado</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section reveal">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-card card">
+        <p>Email: <a href="mailto:wajdmariam@email.com">wajdmariam@email.com</a></p>
+        <p>LinkedIn: <a target="_blank" href="https://linkedin.com/in/YOUR-LINK">linkedin.com/in/YOUR-LINK</a></p>
+        <p>GitHub: <a target="_blank" href="https://github.com/YOUR-USERNAME">github.com/YOUR-USERNAME</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 • Built by Wajd Mariam • <span class="grad">From silicon to cloud</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
