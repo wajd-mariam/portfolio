@@ -65,8 +65,13 @@ body{
 .divider{width:1px;background:rgba(255,255,255,.15);height:auto}
 
 /* ========== Cards, Grid, Timeline ========== */
-.card{background:var(--card);border:var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card {
+  background: #213f42;
+  border: var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .meta{color:var(--muted);font-size:.95rem}
 .meta-tags{display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:10px 0 0 0;list-style:none}
 .meta-tags li{border:var(--border);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04)}
@@ -90,7 +95,7 @@ body{
 .pill-list{display:flex;gap:10px;flex-wrap:wrap;padding:0;margin:14px 0 0;list-style:none}
 .pill-list li{padding:8px 12px;border-radius:999px;border:var(--border);background:rgba(255,255,255,0.04);color:#d8dbe2}
 
-/* Contact */
+
 /* Contact */
 .contact-card {
   background: var(--card);
